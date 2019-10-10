@@ -17,6 +17,7 @@ RUN apk -U upgrade \
     su-exec \
     tini \
  && pip3 install --no-cache "isso==${ISSO_VER}" \
+ && pip3 install "gevent" \
  && apk del build-dependencies \
  && rm -rf /tmp/* /var/cache/apk/*
 
